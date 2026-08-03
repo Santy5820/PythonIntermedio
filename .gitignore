@@ -1,0 +1,19 @@
+# Entornos virtuales
+news_env/
+.news_env/
+
+# Caché de Python
+__pycache__/
+*.pyc
+
+# Variables de entorno
+.env
+
+# Configuración de VS Code
+.vscode/
+
+# Configuración de PyCharm
+.idea/
+
+# Archivos del sistema (macOS)
+.DS_Store
