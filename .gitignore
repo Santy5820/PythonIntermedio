@@ -1,6 +1,6 @@
 # Entornos virtuales
-news_env/
-.news_env/
+venv/
+.venv/
 
 # Caché de Python
 __pycache__/
