@@ -51,6 +51,7 @@ def process_article_data(raw_data: dict) -> dict:
 
 
 def get_unique_sources(articles):
+    """Obtiene las fuentes de lo articulos"""
     return {
         article.get("source").get("name")
         for article in articles
@@ -59,6 +60,7 @@ def get_unique_sources(articles):
 
 
 def get_articles_by_source(articles: list[dict], source: str) -> list[dict]:
+    """Obtiene el articulo de una fuente especifica"""
     return list(
         filter(
             lambda article: article["source"]["name"].lower() == source.lower(),
@@ -69,6 +71,6 @@ def get_articles_by_source(articles: list[dict], source: str) -> list[dict]:
 
 def get_reading_time(article: dict) -> dict:
     """Calcula el tiempo de lectura"""
-    minutes = len(article["content"]) // 200 + 1
+    minutes = len(article["content"])
     article["reading_time"] = minutes
     return article
